@@ -11,6 +11,10 @@ The game boils down to four simple rules:
 
 My plan is to make a game with a tool bar and a game play region. The game will also alow for the game to be paused and cells added and removed via mouse click, as well as the capability to speed up and slow down. Once core game play is added I will add some customization abilities like different color modes. With millennial theme (Dark Mode) being the default of course.
 
-This will definitely be a long endeavour but I look forward to using my own brain for once. Instead of just watching a tutorial of a game being made then implementing my own game.
+This will definitely be a long endeavour but I look forward to using my own brain for once. Instead of just watching a video tutorial of a game being made then implementing my own game.
+
+## Documentation & Text Tutorials
+
+-   [Get Started with Win32 and C++](https://docs.microsoft.com/en-us/windows/win32/learnwin32/learn-to-program-for-windows)
 
 Bubba Chabot

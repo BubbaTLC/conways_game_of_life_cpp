@@ -3,6 +3,8 @@
 #endif 
 
 #include <windows.h>
+#include <d2d1.h>
+#pragma comment(lib, "d2d1")
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
@@ -42,7 +44,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 
     ShowWindow(hwnd, nCmdShow);
 
-    // Run the message loop.
+    // Run the message loop. https://docs.microsoft.com/en-us/windows/win32/learnwin32/window-messages
     MSG msg = { };
     while (GetMessage(&msg, NULL, 0, 0))
     {
@@ -57,6 +59,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch (uMsg)
     {
+        case WM_CLOSE:
+            if (MessageBox(hwnd, L"Are you sure you want to quit?", L"Conway's Game of Life", MB_OKCANCEL) == IDOK)
+            {
+                DestroyWindow(hwnd);
+            }
+            return 0;
         case WM_DESTROY:
             PostQuitMessage(0);
             return 0;
@@ -73,6 +81,6 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             return 0;
 
     }
-    return DefWindowProc(hwnd, uMsg, wParam, lParam);
+    return DefWindowProc(hwnd, uMsg, wParam, lParam); // If a msg is un-handled return it. Making it perform the default action to that msg
 }
 
