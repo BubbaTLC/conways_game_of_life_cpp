@@ -1,8 +1,11 @@
 #include <iostream>
+#include "class\Cell.cpp"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World" << endl;
+    Cell cell = Cell(0,0);
+
+    cout << cell.x << endl;
 }
