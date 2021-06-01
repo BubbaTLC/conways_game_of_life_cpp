@@ -1,0 +1,6 @@
+# VS Code
+*.code-workspace
+.vscode
+
+# Ignore Executables
+*.exe
