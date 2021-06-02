@@ -151,10 +151,10 @@ LRESULT MainWindow::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
     switch (uMsg)
     {
         case WM_CREATE:
-            if (FAILED(D2D1CreateFactory(D2D1_FACTORY_TYPE_SINGLE_THREADED, &pFactory)))
-            {
-                return -1;  // Fail CreateWindowEx.
-            }
+            // if (FAILED(D2D1CreateFactory(D2D1_FACTORY_TYPE_SINGLE_THREADED, &pFactory)))
+            // {
+            //     return -1;  // Fail CreateWindowEx.
+            // }
             return 0;
 
         case WM_DESTROY:
